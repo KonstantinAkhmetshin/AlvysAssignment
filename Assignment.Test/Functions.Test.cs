@@ -7,7 +7,6 @@ namespace Assignment.Test;
 
 public class Functions_Test
 {
-
     [Test]
     public void Map_AddOne()
     {

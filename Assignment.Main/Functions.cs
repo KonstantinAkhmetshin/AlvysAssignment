@@ -10,22 +10,18 @@ namespace Assignment.Main
             Console.WriteLine("Alvys");
         }
 
-        public static List<B> Map<A, B>(List<A> list, Func<A, B> f)
+        public static List<B> Map<A, B>(List<A> list, Func<A, B> func)
         {
-
             if (list?.Any() != true)
             {
                 return new List<B>();
             }
-            if (f == null)
-            {
-                throw new ArgumentNullException("Input function cannot be null.");
-            }
+            MapAgrsValidator(func);
             var result = new List<B>(list.Count());
             foreach (var element in list)
             {
                 if (element == null) continue;
-                result.Add(f(element));
+                result.Add(func(element));
             }
             return result;
         }
@@ -33,14 +29,7 @@ namespace Assignment.Main
         public static B Fold<A, B>(List<A> list, B initial, Func<B, A, B> folder)
         {
             if (list?.Any() != true) return initial;
-            if (folder == null)
-            {
-                throw new ArgumentNullException("Input function cannot be null.");
-            }
-            if (initial == null)
-            {
-                throw new ArgumentNullException("Input initial cannot be null.");
-            }
+            FoldArgsValidator(initial, folder);
             B result = initial;
             foreach (var element in list)
             {
@@ -54,14 +43,7 @@ namespace Assignment.Main
         public static string Fold<A>(List<A> list, string initial, Func<string, A, string> folder)
         {
             if (list?.Any() != true) return initial;
-            if (folder == null)
-            {
-                throw new ArgumentNullException("Input function cannot be null.");
-            }
-            if (initial == null)
-            {
-                throw new ArgumentNullException("Input initial cannot be null.");
-            }
+            FoldArgsValidator(initial, folder);
             StringBuilder result = new StringBuilder(initial);
             foreach (var element in list)
             {
@@ -71,20 +53,16 @@ namespace Assignment.Main
             return result.ToString();
         }
 
-        public static List<B> Map2<A, B>(List<A> list, Func<A, B> f)
+        public static List<B> Map2<A, B>(List<A> list, Func<A, B> func)
         {
             if (list?.Any() != true)
             {
                 return new List<B>();
             }
-            if (f == null)
-            {
-                throw new ArgumentNullException("Input function cannot be null.");
-            }
-
+            MapAgrsValidator(func);
             return Fold(list, new List<B>(), (state, element) =>
             {
-                state.Add(f(element));
+                state.Add(func(element));
                 return state;
             });
 
@@ -97,6 +75,24 @@ namespace Assignment.Main
             // }
             // return result;
         }
+        private static void FoldArgsValidator<A,B>(B initial, Func<B, A, B> folder)
+        {
+            if (folder == null)
+            {
+                throw new ArgumentNullException("Input function cannot be null.");
+            }
+            if (initial == null)
+            {
+                throw new ArgumentNullException("Input initial cannot be null.");
+            }
+        }
 
+        private static void MapAgrsValidator<A,B>(Func<A, B> func)
+        {
+            if (func == null)
+            {
+                throw new ArgumentNullException("Input function cannot be null.");
+            }
+        }
     }
 }
