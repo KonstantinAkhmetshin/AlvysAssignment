@@ -4,7 +4,7 @@ class Functions
 {
 
     public static void Main(string[] args){
-        Console.WriteLine(Map(new List<int>(){1,2,3}, x => x +1));
+        Console.WriteLine(Map(new List<int>(){1,2,3}, x => x +2));
     }
 
     private static List<B> Map<A, B>(List<A> list, Func<A, B> f)
