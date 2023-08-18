@@ -1,0 +1,15 @@
+/home/kos/AlvysAssignment/Assignment.Main/bin/Debug/net6.0/Assignment.Main
+/home/kos/AlvysAssignment/Assignment.Main/bin/Debug/net6.0/Assignment.Main.deps.json
+/home/kos/AlvysAssignment/Assignment.Main/bin/Debug/net6.0/Assignment.Main.runtimeconfig.json
+/home/kos/AlvysAssignment/Assignment.Main/bin/Debug/net6.0/Assignment.Main.dll
+/home/kos/AlvysAssignment/Assignment.Main/bin/Debug/net6.0/ref/Assignment.Main.dll
+/home/kos/AlvysAssignment/Assignment.Main/bin/Debug/net6.0/Assignment.Main.pdb
+/home/kos/AlvysAssignment/Assignment.Main/obj/Debug/net6.0/Assignment.Main.csproj.AssemblyReference.cache
+/home/kos/AlvysAssignment/Assignment.Main/obj/Debug/net6.0/Assignment.Main.GeneratedMSBuildEditorConfig.editorconfig
+/home/kos/AlvysAssignment/Assignment.Main/obj/Debug/net6.0/Assignment.Main.AssemblyInfoInputs.cache
+/home/kos/AlvysAssignment/Assignment.Main/obj/Debug/net6.0/Assignment.Main.AssemblyInfo.cs
+/home/kos/AlvysAssignment/Assignment.Main/obj/Debug/net6.0/Assignment.Main.csproj.CoreCompileInputs.cache
+/home/kos/AlvysAssignment/Assignment.Main/obj/Debug/net6.0/Assignment.Main.dll
+/home/kos/AlvysAssignment/Assignment.Main/obj/Debug/net6.0/ref/Assignment.Main.dll
+/home/kos/AlvysAssignment/Assignment.Main/obj/Debug/net6.0/Assignment.Main.pdb
+/home/kos/AlvysAssignment/Assignment.Main/obj/Debug/net6.0/Assignment.Main.genruntimeconfig.cache
